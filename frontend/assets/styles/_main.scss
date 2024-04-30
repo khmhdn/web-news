@@ -1,0 +1,59 @@
+// tailwindcss config
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "animate.css";
+
+@import "./fonts.scss";
+
+// theme css variables ------------------------------------
+@layer base {
+  :root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-transparent: transparent;
+    --color-blue-300: #93c5fd;
+    --color-blue-400: #60a5fa;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+    --color-red-500: #ef4444;
+    --color-emerald-500: #10b981;
+  }
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: white;
+  background-color: theme("colors.slate.900");
+}
+
+#__nuxt .antialiased {
+  color: white;
+  background-color: theme("colors.slate.900");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.5);
+  z-index: 20;
+}
+
+.main {
+  height: calc(100vh - 135px);
+  @screen sm {
+    & {
+      height: calc(100vh - 215px);
+    }
+  }
+}
